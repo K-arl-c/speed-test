@@ -3,8 +3,8 @@
 ## To Do
 
 ### REACT
-- [ ] Div to hold the paragrah
-- [ ] Div to hold individual word
+- [x] Div to hold the paragrah
+- [x] Div to hold individual word
 - [ ] Div to hold each letter
 - [ ] invisible input to check users words
 - [ ] Stats page that displays upon completion
