@@ -7,7 +7,8 @@ import GenerateParagraph from './typeTest.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    {/* <App /> */}
     <GenerateParagraph />
+    
   </StrictMode>,
 )

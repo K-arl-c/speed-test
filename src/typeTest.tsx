@@ -1,5 +1,6 @@
 import { generate } from 'random-words';
 import React from 'react';
+import './typeTest.css';
 
 
 const GenerateParagraph = () => {
@@ -11,9 +12,9 @@ const splitParagraph = paragraph.split(" ")
 console.log(splitParagraph)
 
 return(
-    <div id='generatedText'>
+    <div id='generatedTextContainer'>
     {splitParagraph.map((word,index)=>
-    <div key={index}>{word}</div>
+    <div key={index} className='word'>{word}</div>
 )}
     </div>
 
