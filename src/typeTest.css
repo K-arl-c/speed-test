@@ -14,3 +14,15 @@
     margin: 6px;
     color: #646669;
 }
+
+.correct{
+    color: rgb(255, 255, 255);
+}
+
+.incorrect{
+    color: red;
+}
+
+.completed{
+    color: green;
+}
