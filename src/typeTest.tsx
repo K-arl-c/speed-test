@@ -1,5 +1,5 @@
 import { generate } from 'random-words';
-import React, { useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import './typeTest.css';
 import UserInput from './userInput';
 
@@ -12,9 +12,10 @@ const splitParagraph = paragraph.split(" ")
 const [userInput, setUserInput] = useState("");
 const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
-const handleUserTyping =(typedText) =>{
+const handleUserTyping = (typedText) =>{
     if(typedText.trim() === splitParagraph[currentWordIndex] && typedText.endsWith(" ")){
-    
+        let currentWordDiv = document.getElementById("word"+currentWordIndex);
+        currentWordDiv!.className = "completed"
         setCurrentWordIndex(currentWordIndex+1);
         setUserInput("")
     } else{
@@ -26,9 +27,9 @@ return(
     <>    
     <div id='generatedTextContainer'>
     {splitParagraph.map((word,wordIndex)=>(
-    <div key={wordIndex} className='word'>
+    <div key={wordIndex} className='word' id={`word`+wordIndex}>
     {word.split("").map((letter, letterIndex) => {
-    let letterClass = "";
+    let letterClass;
         if (wordIndex === currentWordIndex) {
                 if (letterIndex < userInput.length) {
                   letterClass = userInput[letterIndex] === letter ? "correct" : "incorrect";

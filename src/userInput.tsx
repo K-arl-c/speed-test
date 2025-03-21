@@ -29,3 +29,4 @@ const UserInput = ({ onUserType }) => {
 };
 
 export default UserInput;
+
