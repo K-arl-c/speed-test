@@ -5,15 +5,15 @@
 ### REACT
 - [x] Div to hold the paragrah
 - [x] Div to hold individual word
-- [ ] Div to hold each letter
+- [x] Div to hold each letter
 - [ ] invisible input to check users words
 - [ ] Stats page that displays upon completion
 - [ ] Cursor following current selected letter
 - [ ] Only display 3 lines of words (this can be adjusted by the user)
 
 #### SCSS
-- [ ] Styling for correct letter/ word
-- [ ] Styling for incorrect letter/ word
+- [x] Styling for correct letter/ word
+- [x] Styling for incorrect letter/ word
 
 
 ##### TS

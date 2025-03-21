@@ -9,7 +9,6 @@ const UserInput = ({ onUserType }) => {
     if(typedText.endsWith(" ")){
         setInputValue("");
         onUserType(typedText);
-        console.log("space pressed")
     } else{
         setInputValue(typedText);
         onUserType(typedText);
@@ -23,7 +22,8 @@ const UserInput = ({ onUserType }) => {
       value={inputValue}
       onChange={handleInputChange}
       placeholder="Start typing..."
-      autoFocus 
+      autoFocus={true}
+      onBlur={({ target }) => target.focus()}
     />
   );
 };

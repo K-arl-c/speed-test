@@ -15,7 +15,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
 const handleUserTyping = (typedText) =>{
     if(typedText.trim() === splitParagraph[currentWordIndex] && typedText.endsWith(" ")){
         let currentWordDiv = document.getElementById("word"+currentWordIndex);
-        currentWordDiv!.className = "completed"
+        currentWordDiv!.className += " completed"
         setCurrentWordIndex(currentWordIndex+1);
         setUserInput("")
     } else{
@@ -46,7 +46,7 @@ return(
         ))}
       </div>
 
-      <UserInput words={splitParagraph} onUserType={handleUserTyping} />
+      <UserInput words={splitParagraph} onUserType={handleUserTyping}/>
     </>
   );
 };
