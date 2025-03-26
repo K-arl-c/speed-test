@@ -26,3 +26,16 @@
 .completed{
     color: white;
 }
+
+
+
+@keyframes blink {
+    from { border-left-color: white; }
+    to { border-left-color: transparent; }
+}
+
+.cursor {
+    border-left: 2px solid white;
+    animation: blink 1s infinite;
+    display: inline-block;
+}

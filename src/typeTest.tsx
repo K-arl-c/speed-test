@@ -39,6 +39,8 @@ return(
         if (wordIndex === currentWordIndex) {
                 if (letterIndex < userInput.length) {
                   letterClass = userInput[letterIndex] === letter ? "correct" : "incorrect";
+                } else if (letterIndex === userInput.length) {
+                  letterClass = "cursor";
                 }
               }
  return (
@@ -47,6 +49,7 @@ return(
                 </span>
               );
             })}
+            <span className='cursor'></span>
             &nbsp;
           </div>
         ))}
