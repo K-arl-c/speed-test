@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './userInput.css'
+import Timer from './timer';
 
 const UserInput = ({ onUserType }) => {
  const [inputValue,setInputValue] = useState("");

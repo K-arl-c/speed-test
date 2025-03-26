@@ -2,10 +2,10 @@ import { generate } from 'random-words';
 import React, { use, useRef, useState } from 'react';
 import './typeTest.css';
 import UserInput from './userInput';
-
+import Timer from './timer';
 
 const GenerateParagraph = () => {
-
+const GAME_TIME = 60;
 const [paragraph] = useState(generate({exactly:100,join:" "}))
 const splitParagraph = paragraph.split(" ")
 
@@ -23,8 +23,14 @@ const handleUserTyping = (typedText) =>{
     }
 };
 
+
+// TODO implement timer, use getelementsbyclassname.length to find correct letters 
+
+// (correct letters / 5) / time
+
 return(
-    <>    
+    <>
+    <Timer/>
     <div id='generatedTextContainer'>
     {splitParagraph.map((word,wordIndex)=>(
     <div key={wordIndex} className='word' id={`word`+wordIndex}>
